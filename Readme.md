@@ -1,52 +1,43 @@
-# IMDb Movie Dataset Analysis 🎬
+# Interactive Movie Dashboard with Streamlit 🎬
 
 ## Project Description
 
-This project is an exploratory data analysis (EDA) of The Movie Database (TMDb) dataset. The primary goal is to clean and prepare the raw data, and then uncover insights and relationships using Python. The analysis relies on the Pandas library for data manipulation and Matplotlib for creating visualizations.
+This project is an interactive web application built with Python and Streamlit for exploring The Movie Database (TMDb) dataset. It allows users to dynamically filter a large movie dataset by year range and genre, and view the results in a clean, formatted table along with summary visualizations.
+
+The application is deployed and publicly accessible via Streamlit Community Cloud.
+
+**Live Demo:** [https://app-movie-dashboard-3wx6nqb8nubmqqixryiv6k.streamlit.app/]
 
 ---
 
-## Key Questions & Findings
+## Features
 
-This analysis sought to answer two main questions:
-
-#### 1. What is the distribution of movie ratings?
-- **Finding:** After filtering out movies with fewer than 10 votes, the data shows a distribution centered around average-to-good ratings, with a peak between 6.0 and 7.5 out of 10. This suggests that extremely low-rated movies are relatively rare once a minimum number of votes is considered.
-![img.png](img.png)
-
-
-#### 2. What is the relationship between a movie's budget and its revenue?
-- **Finding:** There is a clear positive correlation between budget and revenue. Generally, movies with higher budgets tend to generate higher revenues. However, the data also shows significant variance, highlighting the existence of low-budget successes and high-budget commercial flops.
-![img_1.png](img_1.png)
-
+- **Interactive Filtering:** Users can select a specific year range with a slider and choose one or more genres from a multi-select box.
+- **Dynamic Data Display:** The main data table updates in real-time based on the user's selections.
+- **Data Formatting:** Numerical columns (`budget`, `revenue`) are formatted for readability (e.g., `1,000,000`), and `0` values are replaced with "No data available". Complex data structures (`genres`) are parsed into a clean, human-readable format.
+- **Dynamic Visualizations:** The application generates and displays two charts that update based on the filtered data:
+    1.  A bar chart showing the **Top 10 highest-rated movies**.
+    2.  A line chart showing the **number of movies released per year** within the selected period.
 
 ---
 
-## Dataset
+## Technologies Used
 
-The dataset used for this analysis is the "The Movies Dataset" from Kaggle, which contains metadata for over 45,000 movies.
-
-- **Source:** [Kaggle - The Movies Dataset](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset)
-
----
-
-## Tools and Libraries Used
-
-* **Python**
-* **Pandas** (for data cleaning and analysis)
-* **Matplotlib** (for data visualization)
+- **Python**
+- **Streamlit** (for the web application framework)
+- **Pandas** (for data manipulation and cleaning)
+- **Matplotlib** (for generating plots)
 
 ---
 
-## How to Run This Project
+## How to Run Locally
 
 1.  Clone this repository to your local machine.
-2.  Download the dataset from the Kaggle link above and place the `movies_metadata.csv` file into the project's root directory.
-3.  Install the required libraries:
+2.  Install the required libraries:
     ```bash
-    pip install pandas matplotlib
+    pip install -r requirements.txt
     ```
-4.  Run the Python script:
+3.  Run the Streamlit application:
     ```bash
-    python main.py
+    streamlit run app.py
     ```
