@@ -8,7 +8,10 @@ __pycache__/
 
 # Large data files
 # We don't want to track large CSV or ZIP files in Git
+# Ignore all CSV files...
 *.csv
+# ...EXCEPT for the sample file, which we need for deployment.
+!movies_sample.csv
 *.zip
 *.csv.gz
 movies_metadata.csv
