@@ -1,0 +1,9 @@
+version: '3.8' # Specifies the docker-compose version
+
+services:      # Defines the containers (services) that make up your app
+  app:         # The name we give to our Streamlit service
+    build: .   # Tells Compose to build the image from the Dockerfile in the current directory ('.')
+    ports:
+      - "8501:8501" # Maps port 8501 on the host to port 8501 in the container (same as -p 8501:8501)
+    volumes:
+      - .:/app # Mounts the current directory into the container's /app directory (explained later)

@@ -47,16 +47,12 @@ There are two ways to run this application on your local machine:
     streamlit run app.py
     ```
 
-### Option 2: Running with Docker (Recommended for Production-like Environment)
+### Option 2: Running with Docker Compose
 
 1.  Clone this repository to your local machine.
 2.  Make sure you have Docker Desktop installed and running.
-3.  **Build the Docker Image:** Open a terminal in the project directory and run:
+3.  **Build the Docker Image and run the Docker Container:** Open a terminal in the project directory and run:
     ```bash
-    docker build -t movie-dashboard .
+    docker-compose up
     ```
-4.  **Run the Docker Container:** Once the image is built, run the container with:
-    ```bash
-    docker run -p 8501:8501 movie-dashboard
-    ```
-5.  Open your web browser and navigate to `http://localhost:8501`.
+4. Open your web browser and navigate to `http://localhost:8501`.
