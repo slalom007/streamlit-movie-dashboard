@@ -1,0 +1,20 @@
+# Ignore the virtual environment folder
+.venv/
+venv/
+
+# Ignore IDE settings
+.idea/
+
+# Ignore Python cache
+__pycache__/
+
+# Ignore Git folder
+.git/
+
+# Ignore large data files that are not needed in the container
+movies_metadata.csv
+*.zip
+*.gz
+
+# Ignore any temporary or local-only scripts
+create_sample.py

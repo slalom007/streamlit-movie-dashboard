@@ -4,9 +4,9 @@
 
 This project is an interactive web application built with Python and Streamlit for exploring The Movie Database (TMDb) dataset. It allows users to dynamically filter a large movie dataset by year range and genre, and view the results in a clean, formatted table along with summary visualizations.
 
-The application is deployed and publicly accessible via Streamlit Community Cloud.
+The application is deployed and publicly accessible via Streamlit Community Cloud. It can also be run locally using Docker.
 
-**Live Demo:** [https://app-movie-dashboard-3wx6nqb8nubmqqixryiv6k.streamlit.app/]
+**Live Demo:** https://app-movie-dashboard-3wx6nqb8nubmqqixryiv6k.streamlit.app/
 
 ---
 
@@ -27,10 +27,15 @@ The application is deployed and publicly accessible via Streamlit Community Clou
 - **Streamlit** (for the web application framework)
 - **Pandas** (for data manipulation and cleaning)
 - **Matplotlib** (for generating plots)
+- **Docker** (for containerization)
 
 ---
 
 ## How to Run Locally
+
+There are two ways to run this application on your local machine:
+
+### Option 1: Running with Python Virtual Environment (Recommended for Development)
 
 1.  Clone this repository to your local machine.
 2.  Install the required libraries:
@@ -41,3 +46,17 @@ The application is deployed and publicly accessible via Streamlit Community Clou
     ```bash
     streamlit run app.py
     ```
+
+### Option 2: Running with Docker (Recommended for Production-like Environment)
+
+1.  Clone this repository to your local machine.
+2.  Make sure you have Docker Desktop installed and running.
+3.  **Build the Docker Image:** Open a terminal in the project directory and run:
+    ```bash
+    docker build -t movie-dashboard .
+    ```
+4.  **Run the Docker Container:** Once the image is built, run the container with:
+    ```bash
+    docker run -p 8501:8501 movie-dashboard
+    ```
+5.  Open your web browser and navigate to `http://localhost:8501`.
